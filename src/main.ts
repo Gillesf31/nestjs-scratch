@@ -7,6 +7,11 @@ class AppController {
     getRootRoute() {
         return 'Hello World!';
     }
+
+    @Get('test')
+    getTestRoute() {
+        return 'Test route';
+    }
 }
 
 @Module({
@@ -18,3 +23,4 @@ async function bootstrap() {
     const app = await NestFactory.create(AppModule);
     await app.listen(3000);
 }
+bootstrap();
